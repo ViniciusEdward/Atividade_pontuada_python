@@ -37,8 +37,11 @@ menor_numero = min(lista_numeros)
 
 # Calculando as médias
 media_geral = soma_geral / valor
-media_pares = soma_pares / quantidade_pares 
-media_impares = soma_impares / quantidade_impares
+if quantidade_pares > 0:
+    media_pares = soma_pares / quantidade_pares
+else:
+    print("Não tem números pares")
+
 
 # Imprimindo as estatísticas
 os.system("cls || clear")
@@ -53,8 +56,18 @@ print(f"Maior número: {maior_numero}")
 print(f"Menor número: {menor_numero}")
 
 print("\n=== Médias ===")
-print(f"Média dos números pares: {media_pares:.2f}")
-print(f"Média dos números ímpares: {media_impares:.2f}")
+if quantidade_pares > 0:
+    media_pares = soma_pares / quantidade_pares
+    print(f"Média dos números pares: {media_pares:.2f}")
+else:
+    print("Não tem média de números pares")
+
+if quantidade_impares > 0:
+    media_impares = soma_impares / quantidade_impares
+    print(f"Média dos números ímpares: {media_impares:.2f}")
+else:
+    print("Não tem média de números impares")
+    
 print(f"Média de todos os números: {media_geral:.2f}")
 
 # Mostrando números na ordem inversa
