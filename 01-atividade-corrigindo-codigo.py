@@ -37,11 +37,6 @@ menor_numero = min(lista_numeros)
 
 # Calculando as médias
 media_geral = soma_geral / valor
-if quantidade_pares > 0:
-    media_pares = soma_pares / quantidade_pares
-else:
-    print("Não tem números pares")
-
 
 # Imprimindo as estatísticas
 os.system("cls || clear")
